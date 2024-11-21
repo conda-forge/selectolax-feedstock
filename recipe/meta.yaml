@@ -1,26 +1,28 @@
-{% set name = "selectolax" %}
 {% set version = "0.3.26" %}
 
 package:
-  name: {{ name|lower }}
+  name: selectolax
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/selectolax-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/s/selectolax/selectolax-{{ version }}.tar.gz
   sha256: fd8da39a64145cb14c1f6ec9ca7378342af7de9ba4c8e3d65d5daa107594826b
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   build:
-    - {{ compiler('c') }}
+    - {{ compiler("c") }}
     - {{ stdlib("c") }}
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - cython                                 # [build_platform != target_platform]
+    - python                                 # [build_platform != target_platform]
   host:
-    - python
     - cython
     - pip
+    - python
     - setuptools
   run:
     - python
@@ -42,6 +44,7 @@ about:
     - lexbor/LICENSE
     - lexbor/NOTICE
     - modest/LICENSE
+  doc_url: https://selectolax.readthedocs.io
 
 extra:
   recipe-maintainers:
