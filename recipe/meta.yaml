@@ -5,7 +5,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/s/selectolax/selectolax-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/s/selectolax/selectolax-{{ version }}.tar.gz
   sha256: fd8da39a64145cb14c1f6ec9ca7378342af7de9ba4c8e3d65d5daa107594826b
 
 build:
