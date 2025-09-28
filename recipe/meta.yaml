@@ -1,4 +1,4 @@
-{% set version = "0.3.34" %}
+{% set version = "0.4.0" %}
 
 package:
   name: selectolax
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/selectolax/selectolax-{{ version }}.tar.gz
-  sha256: c2cdb30b60994f1e0b74574dd408f1336d2fadd68a3ebab8ea573740dcbf17e2
+  sha256: 0387798f42b36ce24bc19d599ecd6ebe56ee559fe108d43978fac371cece15c7
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
