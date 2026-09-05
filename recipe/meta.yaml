@@ -5,12 +5,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/s/selectolax/selectolax-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/s/selectolax/selectolax-{{ version }}.tar.gz
   sha256: 2b565ddabce6c9a7b73fa28a39acf8f411a084fa2f169234ec2470f552d4421d
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   build:
