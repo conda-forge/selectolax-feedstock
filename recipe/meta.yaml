@@ -44,7 +44,6 @@ about:
     - LICENSE
     - lexbor/LICENSE
     - lexbor/NOTICE
-    - modest/LICENSE
   doc_url: https://selectolax.readthedocs.io
 
 extra:
